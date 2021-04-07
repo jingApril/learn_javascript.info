@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    let user = {
+      name: "John",
+      surname : "Smith"
+    }
+    
+    user.name = "Pete";
+    delete user.name;
+
+    let schedule ={};
+    function isEmpty(obj) {
+       for (let key in obj) {
+         return false;
+       }
+       return true;
+    }
+    schedule["8:30"] = "get up";
+    console.log(schedule)
+    alert( isEmpty(schedule));
+ 
+  let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+  }
+  function sumAll(obj) {
+      var sum = 0;
+      for (let key in salaries) {
+        sum += salaries[key]
+      }
+      return sum;
+  }
+console.log(sumAll(salaries));
+
+ let  menu = {
+   width: 200,
+   height: 300,
+   title: "My memu"
+ }
+
+ function  multiplyNumeric(obj) {
+  //  for (let key in obj) {
+  //    if(Number(obj[key])) {
+  //     obj[key] *= 2
+  //    }
+  //  }
+  for (let key in obj) {
+    if(typeof obj[key] == 'number') {
+      obj[key] *= 2;
+    }
+  }
+ }
+
+ multiplyNumeric(menu);
+ console.log(menu);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+     <script>
+		//for Wap （js代码放在head标签内第一行，保证在title标签之前）
+    var isOnPc = !(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent));
+    var urlCurrent = location.href;
+    if(!isOnPc){
+        var urlNew="";
+        if(urlCurrent.indexOf("www.jstz.org.cn/") != -1){
+            urlNew = urlCurrent.replace("cn/","cn/wap/");
+        }else{
+            urlNew = urlCurrent.replace("com/","com/wap/");
+        }
+        location.href = urlNew;
+    }
+	</script> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>$channel.getName()_江苏统一战线</title>   
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="http://static.jstv.com/ui/jstv/css/reset.css" type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="http://static.jstv.com/ui/jstv/css/common.css" type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="http://static.jstv.com/ui/jsr/images/list.css" type="text/css" charset="utf-8"/>
+     <style>
+		.top-nav {background:#00664b;height:48px;line-height: 48px;width: 100%; min-width: 1000px; border-top:none;}
+		.top-nav li a.txt {display: inline-block;height: 48px;line-height: 48px;padding: 0 16px; color:#FFF;}
+        .top-nav li.on a.txt,.top-nav li a.txt:hover{background: #edad49;color: #fff;}
+		.adv{text-align: center;padding: 10px 0;}
+		.nav .logo{width:65px;height: 46px; margin-top:18px; background: url(http://static.jstv.com/ui/jsr/images/logo.png) no-repeat;}
+		.nav{margin-bottom: 20px;}
+		.nav .main-nav{min-width: 1000px;border-bottom: 3px solid #FFF;}
+		.share-box {padding:0px 0 50px 87px;border-top: 1px solid #d6d6d6;position: relative;font-family: "Hiragino Sans GB","Microsoft YaHei";}
+		.nav-bread {margin-top: 15px;font-family: "微软雅黑";}
+		.nav { margin-bottom: 10px;}
+		
+        .sidebar .bd {height:120px;overflow: hidden;position: relative;width:100%;margin-bottom: 20px;}
+		.bd .news li {height: 30px;position: relative; overflow: hidden;}
+		.bd .news li a { font-size:14px;line-height: 30px;}
+		.sidebar .ld{position: relative;width:320px;height:100px;overflow: hidden;}
+		.sidebar .ld li{width:150px;height:100px;position: relative;float: left;margin-left:7px; margin-right:3px;}
+		.sidebar .ld img{width:150px;height:100px;position: relative;}
+		.ld li .ft{position: absolute;left: 0px;bottom: 0px;z-index: 11;padding:0px 10px;height:28px;overflow: hidden;line-height: 28px;
+background: url("http://static.jstv.com/ui/common/images/slide_mask1.png") 0 bottom repeat-x;background-size: 100% 100%;width: 130px;}
+        .ld li .ft a{color:#fff;}
+        .bd .main{width:1000px;}
+        .jstvlist li span{width:880px;}
+        .downKey{width:300px; position: absolute; visibility: inherit;left:50%;bottom:0px;margin-left:-150px;height:80px;display:none;}
+        .downKey img{width:49px;height:49px;position:absolute;top:0;right:0;bottom:0;left:0;left: 50%;margin-left: -25px;}
+        .downKey a {display:block;height:100%;}
+        .downKey p{width:100%;height:50px;font-size: 18px;font-weight:bold;color:#fff;line-height: 50px;text-align: center;position: absolute;top:40px;}
+.jstvlist li::before {
+	content: "•";
+	padding-right: 5px;
+	color: rgb(89, 89, 89);
+}
+.jstvlist{
+	border-bottom:1px dashed #cecece;
+}
+.jstvlist li span{display:inline-block;font-size:15px;font-weight:normal;/*margin-left:6px;*/line-height:24px;width:514px;overflow:hidden;/*white-space:nowrap;*/vertical-align:middle;text-overflow: ellipsis; white-space: nowrap; padding-bottom:2px;}
+	</style>
+	<script type="text/javascript" src="http://static.jstv.com/ui/common/file/analyticstzb.js"></script>
+</head>
+<body>
+<!--外部引入导航栏-->
+<div style="position: relative;min-width:1200px;"> 
+    <!-- <img src="http://static.jstv.com/ui/jstz/img/top7.jpg" alt="" style="width:100%;min-width:1000px;"/> -->
+	<div class="downKey">
+        <a href="javascript:void(0);" target="_self">
+            <img src="http://static.jstv.com/ui/jstz/img/downKey.png" alt="" />
+            <p>点击进入</p>
+        </a>
+    </div>
+</div>
+
+<div class="nav clearfix J-nav">
+    <div class="wrap main-nav clearfix">
+        <div class="fL nav-bread">
+            <a href="http://www.jstz.org.cn/">首页</a><span> > </span>专题<span> > </span><a>$channel.getName()</a>
+        </div>
+    </div>
+</div>
+    <div id="J_bodyBd" class="bd clearfix">
+        <div class="main fL">
+        	<div class="jstvcolumnleftcnt">
+                #set($i=0)
+                #foreach( $item in $Controller.listItems("*"))
+                #if($i%6==0)
+                <ul class="jstvlist">
+                #end
+                #set($i=$i+1)
+                    #set($hrf=$item.getValue('Href'))
+                    #if($hrf=='') #set($hrf=$item.getHttpHref()) #end
+                    <li><span><a href="$hrf" target="_blank">$item.getTitle()</a></span><em>$item.FormatDate("yyyy年MM月dd日",$item.getPublishDate())</em></li>
+                #if($i%6==0)
+                </ul>
+                #end
+                #end
+            	<div class="pagination">
+                    <div class="page">
+                    #set($total = $Controller.getPageNumber())
+                    #set($page = $Controller.getCurrentPage())
+                    #if($total > 1)
+                    #if($page == 1)
+                    	<a href="$Controller.getPageHref(1)"><span class="current">1</span></a>
+                    #else
+                        <a href="$Controller.getPrevPageHref()"><span class="prev">上一页</span></a>
+                        <a href="$Controller.getPageHref(1)"><span>1</span></a>
+                    #end
+                    #if($page > 4)
+                        <span>…</span>
+                    #end
+                    #if($page > 4)
+                        #set($from = $page - 2)
+                        #if($from < 1) #set($from = 1) #end
+                    #else
+                        #set($from = 1)
+                    #end
+                    #if($page > 3)
+                        #set($to = $page + 2)
+                    #else
+                        #set($to = 6)
+                    #end
+                    #if($to > $total) #set($to = $total) #end
+                    #if($total > 1)
+                        #foreach($foo in [$from..$to])
+                            #if($foo != 1 && $foo != $total)
+                                #if($page == $foo)
+                                    <a href="$Controller.getPageHref($foo)"><span class="current">$foo</span></a>
+                                #else
+                                    <a href="$Controller.getPageHref($foo)"><span>$foo</span></a>
+                                #end
+                            #end
+                        #end
+                    #end
+                    #if($to+1 < $total)
+                        <span>…</span>
+                    #end
+                    #if($page == $total)
+                            <a href="$Controller.getPageHref($total)"><span class="current">$total</span></a>
+                        #else
+                            <a href="$Controller.getPageHref($total)"><span>$total</span></a>
+                            <a href="$Controller.getNextPageHref()"><span class="next">下一页</span></a>
+                        #end
+                    #end
+                    </div>
+            	</div>
+        	</div>
+        </div>
+        <!--<div class="sidebar fR">
+            <div class="con">
+                <h4 class="clearfix"><p class="t fL">统战要闻</p></h4>
+                <div class="bd clearfix">
+                    \#include virtual="/include/_jstz_ln4tzyw.shtml"
+                </div>
+            </div>
+            <div class="con">
+                <h4 class="clearfix"><p class="t fL">统战视频</p></h4>
+                <ul class="pic-list clearfix">a
+                    \#include virtual="/include/_jstz_ln4tzvideo.shtml"
+                </ul>
+            </div>
+        </div>-->
+    </div>
+
+    <!-- jquery begin -->
+    <script type="text/javascript" src="http://static.jstv.com/ui/common/jq172.js"></script>   
+    <!-- jquery end -->
+    <script type="text/javascript" src="http://static.jstv.com/ui/common/js/common.js"></script>
+    <script src="https://static.jstv.com/ui/common/file/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+   <!-- Gridsum tracking code begin. -->
+<script type='text/javascript'>
+    (function () {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = (location.protocol == 'https:' ? 'https://ssl.' : 'http://static.') + 'gridsumdissector.com/js/Clients/GWD-002792-01BE9A/gs.js';
+        var    firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(s, firstScript);
+    })();
+</script>
+<!--Gridsum tracking code end. --> 
+
+<script type="text/javascript">
+	$('.downKey').click(function(){ 
+    var scroll_offset = $(".J-nav").offset(); 
+    $("body,html").animate({ 
+      scrollTop:scroll_offset.top-100 
+    },1000); 
+  });
+</script>
+</body>
+</html>

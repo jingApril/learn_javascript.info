@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="p1.css"></script>
+  <title>Document</title>
+</head>
+<body>
+  <ol>
+    <li>Ooops.</li>
+    <li>The default list-position, outside, means the marker is outside the centered text box.</li>
+    <li>That will make it look like the markers are left aligned.</li>
+  </ol>
+  
+  <ol class="one">
+    <li><br>If we kick the `list-style-position` inside, the numbers will be centered along with the text.</li>
+    <li><br>Adding a literal &lt;br> element will put it up top (like we are aiming for).</li>
+    <li><br>Having to use a special HTML element ain't great though.</li>
+  </ol>
+  
+  <ol class="two">
+    <li>Rather than use a default `list-style`, we can override it with `::marker`</li>
+    <li>This means we can use whatever, text, unicode, emoji...</li>
+    <li>Plus we can style it, at least a little.</li>
+  </ol>
+  
+  <ol class="three">
+    <li>But if we hard-code the `::marker`, we lose the numbering.</li>
+    <li>We can get the numbering back by using counters.</li>
+    <li>Here we've used that trick as well as the super weird line-break-in-pseudo-content trick.</li>
+  </ol>
+  
+  <ol class="four">
+    <li>`::marker` is somewhat new though.</li>
+    <li>This is an example of using a `::before` pseudo element instead.</li>
+    <li>It probably has slightly better browser support, and you don't need to weird white-space hack.</li>
+  </ol>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 1.Filter unique array members 
+
+     /*    function unique(arr) {
+            let set = new Set();
+            let newArr =[]
+            for (let item of arr) {
+                set.add(item)
+            }
+            for (let item of set) {
+                newArr.push(item);
+            }
+            console.log(set);
+            console.log(new Set(arr));
+            console.log(newArr);
+            return (newArr);
+        }
+        // function unique(arr) {
+        //     return Array.from(new Set(arr))
+        // }
+        let values = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-O"];
+        alert( unique(values) ); */
+
+// 2.Filter anagrams
+
+/* function aclean(arr) {
+    let map = new Map();
+
+    for (let word of arr) {
+        let sorted = word.toLowerCase().split('').sort().join('');
+        map.set(sorted, word)
+    }
+    return Array.from(map.values())
+}
+let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+alert( aclean(arr) ); // "nap,teachers,ear" or "PAN,cheaters,era"
+ */
+
+// 3.Iterable keys
+
+    let map = new Map();
+    map.set("name", "John");
+    let keys = Array.from(map.keys());
+    let keys = [...map.keys()];
+    keys.push("more");
+    console.log(keys);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

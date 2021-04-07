@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Destructuring assignment
+/*     let user = { name: "John", years: 30 };
+    // your code to the left side:
+    // ... = user
+    let { name, years : age, isAdmin = false} = user
+    alert( name ); // John
+    alert( age ); // 30
+    alert( isAdmin ); // false */
+
+     //The maximal salary 
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
+
+function topSalary(user){
+    let maxName = null;
+    let maxSalary = 0;
+    for (let [key, value] of Object.entries(user)) {
+        if (value > maxSalary) {
+            maxSalary = value;
+            maxName = key;
+          
+        }
+       }
+       return maxName
+
+}
+alert(topSalary(salaries));
+    </script>
+</body>
+</html>

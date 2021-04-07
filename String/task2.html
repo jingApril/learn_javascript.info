@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+// Uppercase the first character
+/*       function ucFirst(str) {
+        if (!str) return str;
+        return  str[0].toUpperCase() + str.slice(1);
+      }
+      console.log(ucFirst("john")); */
+ //   Check for spam
+/*
+function checkSpam(str) {
+
+    let lowerStr = str.toLowerCase();
+    return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+}
+  console.log( checkSpam('buy ViAgRA now') == true) 
+  console.log( checkSpam('free xxxxx') == true) 
+  console.log( checkSpam("innocent rabbit") == false )  */
+ 
+//  Truncate the text
+
+
+/* function truncate(str, num) {
+    if (str.length > num) {
+        return str.slice(0, num-1) + '...';
+    } else {
+        return str;
+    }
+}
+
+console.log(truncate("What I'd like to tell on this topic is:", 20) )
+console.log(truncate("Hi everyone!", 20) ) */
+
+// Extract the money
+function extractCurrencyValue(str) {
+    return +str.slice(1);
+}
+alert( extractCurrencyValue('$120') === 120);
+
+    </script>
+  </body>
+</html>

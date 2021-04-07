@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "../learn-vue/vue-1"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#a693c1",
+			"activityBar.activeBorder": "#e8ded7",
+			"activityBar.background": "#a693c1",
+			"activityBar.foreground": "#15202b",
+			"activityBar.inactiveForeground": "#15202b99",
+			"activityBarBadge.background": "#e8ded7",
+			"activityBarBadge.foreground": "#15202b",
+			"statusBar.background": "#8b73ae",
+			"statusBar.foreground": "#15202b",
+			"statusBarItem.hoverBackground": "#715797",
+			"titleBar.activeBackground": "#8b73ae",
+			"titleBar.activeForeground": "#15202b",
+			"titleBar.inactiveBackground": "#8b73ae99",
+			"titleBar.inactiveForeground": "#15202b99"
+		},
+		"peacock.color": "#8b73ae"
+	}
+}

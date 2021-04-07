@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let dictionary = Object.create(null, {
+      toString: {
+        value() {
+          return Object.keys(this).join();
+        }
+      }
+    });
+    // your code to add dictionary.toString method
+
+   
+
+    // add some data
+    dictionary.apple= "Apple";
+    dictionary.__proto__ = "test"; // __proto__ is a regular property key here
+
+    for (let key in dictionary) {
+      // alert(key); // "apple", then "__proto__"
+    }
+
+    //  your toString in action
+    // alert(dictionary); // "apple,__proto__"
+
+    function Rabbit(name)  {
+      this.name = name
+    }
+
+    Rabbit.prototype.sayHi = function() {
+      alert(this.name);
+    }
+
+    let rabbit = new Rabbit("Rabbit");
+
+    // rabbit.sayHi();
+    // Rabbit.prototype.sayHi();
+    // Object.getPrototypeOf(rabbit).sayHi();
+    console.log(Object.getPrototypeOf(rabbit));
+    console.log(Object.getPrototypeOf(rabbit)== Rabbit.prototype)
+    console.log(Object.getPrototypeOf(Rabbit)) 
+    console.log(rabbit.__proto__) 
+    console.log(Rabbit.prototype) 
+  </script>
+</body>
+</html>

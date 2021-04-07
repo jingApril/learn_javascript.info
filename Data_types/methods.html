@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks</title>
+</head>
+<body>
+  <script>
+    // let num1 = +prompt("Enter a number", '');
+    // let num2 = +prompt("Enter a number", '');
+    // if(!isFinite(num1) || isFinite(num2)) {
+    //   alert('输入数字！')
+    // } else {
+    //   alert(num1 + num2);
+    // }
+
+// will be true unless you enter Infinity, -Infinity or not a number
+ // alert( isFinite(num) );
+
+
+
+  function readNumber() {
+    let num;
+    do {
+      num = prompt("输入一个数字?", 0);
+    } while (!isFinite(num));
+
+    if (num === null ||num === '') return null;
+
+    return +num;
+  }
+  alert(`${readNumber()}`)
+// randowm float number 
+ function random(x, y) {
+    return min + Math.random() * (max - min);
+ }
+
+// random inter number
+
+function  randomInteger(min, max) {
+  return Math.floor(Math.random() *(max - min + 1 )) + min;
+}
+  </script>
+</body>
+</html>

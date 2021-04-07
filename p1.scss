@@ -1,0 +1,56 @@
+ol,
+ul {
+  text-align: center;
+  background: #eee;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.one {
+  list-style-position: inside;
+}
+
+.two {
+  list-style-position: inside;
+  li::marker {
+    white-space: pre-wrap;
+    content: "❤\A";
+    color: red;
+    font-size: 125%;
+    font-weight: bold;
+  }
+}
+
+.three {
+  counter-reset: ol;
+  list-style-position: inside;
+  li {
+    counter-increment: ol;
+    &::marker {
+      white-space: pre-wrap;
+      content: counter(ol) ". \A";
+      color: orange;
+      font-size: 200%;
+    }
+  }
+}
+
+.four {
+  counter-reset: ol;
+  list-style: none;
+  li {
+    counter-increment: ol;
+    &::before {
+      display: block;
+      content: counter(ol) ".";
+      color: orange;
+      font-size: 200%;
+    }
+  }
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+}

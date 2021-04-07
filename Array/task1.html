@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*     let fruits = ["Apples", "Pear", "Orange"];
+
+    let shoppingCart = fruits;
+    shoppingCart.push("Banana");
+
+    alert( fruits.length ); 
+    ["a", "b", ["a", "b"]] */
+
+/*     var styles = ['Jazz', 'Blues'];
+    styles.push('Rock-n-Roll');
+    styles[1] = 'Classics';
+    styles.shift();
+    styles.unshift('Rap', 'Reggae') */
+
+/*     function sumInput() {
+        let  arr  = [];
+        while(true) {
+            let value = prompt("A number please?", 0);
+            if (value === '' || value == null || !isFinite(value)) break;
+            arr.push(+value);
+        }
+        let sum = 0;
+        for (let number of arr) {
+            sum += number;
+        }
+        return sum;
+    }
+    alert(sumInput()) */
+ // slow way
+
+/*     function getMaxSubSum(arr) {
+        let maxSum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            let sumFixedStart = 0;
+            for (let j = i; j < arr.length; j++) {
+                sumFixedStart += arr[j];
+                maxSum = Math.max(maxSum,   sumFixedStart);
+            }
+        }
+        return maxSum;
+    }
+   alert(getMaxSubSum([-1, 2, 3, -9]))  
+   alert(getMaxSubSum([2, -1, 2, 3, -9]) ) 
+   alert(getMaxSubSum([-1, 2, 3, -9, 11]))
+   alert(getMaxSubSum([-2, -1, 1, 2]))
+   alert(getMaxSubSum([100, -9, 2, -3, 5]) )
+   alert(getMaxSubSum([1, 2, 3]) ) */
+
+   // fast way 
+
+function getMaxSubSum(arr) {
+    let maxSum = 0;
+    let partialSum = 0;
+    for (let item  of arr) {
+        partialSum  += item;
+        maxSum = Math.max(maxSum, )
+    }
+}
+
+   alert(getMaxSubSum([-1, 2, 3, -9]))  
+   alert(getMaxSubSum([2, -1, 2, 3, -9]) ) 
+   alert(getMaxSubSum([-1, 2, 3, -9, 11]))
+   alert(getMaxSubSum([-2, -1, 1, 2]))
+   alert(getMaxSubSum([100, -9, 2, -3, 5]) )
+   alert(getMaxSubSum([1, 2, 3]) ) 
+
+    </script>
+</body>
+</html>

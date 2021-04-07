@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. Create a date
+/*      let d1 = new Date(2012, 1, 20, 3, 12);
+        let d2 = new Date("February 20, 2012 03:12:00");
+        alert(d1);
+        alert(d2); */
+
+        // 2.Show a weekday
+/*     let date = new Date(2012, 0, 3);
+
+    function  getWeekDay(date) {
+        let days = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
+        return days[date.getDay()];
+
+         let x = date.getDay();
+        switch (x) {
+            case 0:
+                return 'SU';
+                break;
+            case 1:
+                return 'MO';
+                break;
+            case 2:
+                return 'TU';
+                break;
+            case 3:
+                return 'WE';
+                break;
+            case 4:
+                return 'TH';
+                break;
+            case 5:
+                return 'FR';
+                break;
+            case 6:
+                return 'SA';
+                break;
+        } 
+    }
+      alert( getWeekDay(date) ); */
+
+      // 3.European weekday
+/*     let date = new Date(2012, 0, 3);  // 3 Jan 2012
+    function getLocalDay(date) {
+        let day = date.getDay();
+
+        if  (day == 0) {
+            return 7;
+        }
+       return  date.getDay();
+    }
+    alert( getLocalDay(date))  */
+
+// 4. Which day of month was many days ago?
+/* let date = new Date(2015, 0, 2);
+
+function getDateAgo(date, n) {
+    let dateCopy = new Date(date);
+    dateCopy.setDate(date.getDate() - n);
+    return dateCopy.getDate();
+}
+alert( getDateAgo(date, 1) ); // 1, (1 Jan 2015)
+alert( getDateAgo(date, 2) ); // 31, (31 Dec 2014)
+alert( getDateAgo(date, 365) ); // 2, (2 Jan 2014) */
+
+// Last day of month?
+/* function getLastDayOfMonth(year, month) {
+    let date = new Date(year, month + 1, 0)
+    // return date.getMonth();
+    return date.getDate();
+}
+alert(getLastDayOfMonth(2012, 1)) */
+
+// How many seconds have passed today?
+/* function getSecondsToday() {
+    let now = new Date();
+    let h = now.getHours();
+    let m = now.getMinutes()
+    let s = now.getSeconds()
+    return  (h * 60* 60 + m * 60 +  s)
+} */
+
+// How many seconds till tomorrow?
+
+/* function getSecondsToTomorrow() {
+    let now = new Date();
+    let h = now.getHours();
+    let m = now.getMinutes()
+    let s = now.getSeconds()
+    return  24* 60* 60  - (h * 60 * 60 + m * 60 + s)
+}
+
+function getSecondsToTomorrow() {
+  let now = new Date();
+  let hour = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+  let totalSecondsToday = (hour * 60 + minutes) * 60 + seconds;
+  let totalSecondsInADay = 86400;
+
+  return totalSecondsInADay - totalSecondsToday;
+}
+
+alert(getSecondsToTomorrow())
+ */
+// Format the relative date
+
+function formatDate(date) {
+
+}
+
+alert( formatDate(new Date(new Date - 1)) ); // "right now"
+
+alert( formatDate(new Date(new Date - 30 * 1000)) ); // "30 sec. ago"
+
+alert( formatDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 min. ago"
+
+// yesterday's date like 31.12.16 20:00
+alert( formatDate(new Date(new Date - 86400 * 1000)) );
+
+    </script>
+</body>
+</html>
